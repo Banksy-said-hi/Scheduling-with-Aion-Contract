@@ -36,7 +36,7 @@ contract MyContract {
         result = x + y;
     }
 
-    // Before scheduling ( By clicking schedule_add() make sure to send enough funds to the contract
+    // Before scheduling any event (-By clicking schedule_add()-) make sure to send enough funds to the contract
     function () public payable {}
 
 }
