@@ -34,16 +34,19 @@ contract SinaContract{
         aion.ScheduleCall.value(callCost)( block.timestamp + _secFromNow, address(this), 0, 800000, 100e9, data, true);
     }
 
-
     function transfer() public {
         Reciever.transfer(9*(address(this).balance)/10);
     }
 
 
-    function () public payable {}
-
 
     function getTimeStamp() public view returns(uint) {
         return block.timestamp;
     }
+    
+    function getBalance() public view returns(uint) {
+        return address(this).balance;
+    }
+    
+    function () public payable {}   
 }
