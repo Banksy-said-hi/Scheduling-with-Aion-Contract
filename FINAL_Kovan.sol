@@ -19,6 +19,7 @@ contract SinaContract{
     }
 
     function scheduleMyfucntion() public {
+        // Kovan net
         aion = AionContract(0x2fC197cD7897f41957F72e8E390d5a7cF2858CBF);
         bytes memory data = abi.encodeWithSelector(bytes4(keccak256('myfucntion()')));
         uint callCost = 800000*100e9 + aion.serviceFee();
